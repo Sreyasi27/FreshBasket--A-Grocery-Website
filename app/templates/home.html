@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero mb-5">
+  <h1>Fresh groceries, <span class="accent">delivered with care.</span></h1>
+  <p class="lead">Fruits, vegetables, dairy and daily essentials in one basket.</p>
+  <a class="btn btn-light rounded-pill fw-semibold" href="{{ url_for('shop.shop') }}">Start shopping</a>
+</section>
+<h2 class="h4 mb-3">Shop by category</h2>
+<div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+  {% for name, emoji in categories %}
+  <div class="col"><a class="card-fb cat-tile" href="{{ url_for('shop.shop') }}"><span class="emoji" aria-hidden="true">{{ emoji }}</span>{{ name }}</a></div>
+  {% endfor %}
+</div>
+<h2 class="h4 mb-3">Popular products</h2>
+<div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3 mb-5">
+  {% for p in products %}<div class="col">{% include "partials/product_card.html" %}</div>{% endfor %}
+</div>
+<div class="row g-3">
+  {% for t, d in [("Quality checked","Items are inspected before packing."),("Clear pricing","Prices shown per unit."),("Simple checkout","Cash on delivery or simulated payment.")] %}
+  <div class="col-md-4"><div class="card-fb feature"><h3 class="h6">{{ t }}</h3><p class="small text-muted mb-0">{{ d }}</p></div></div>
+  {% endfor %}
+</div>
+{% endblock %}
