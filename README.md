@@ -1,4 +1,4 @@
-# FreshBasket — E-Commerce Grocery Web Application
+# FreshBasket — E-Commerce Grocery Web Application 🛒
 
 FreshBasket is a full-stack e-commerce web application built using Python and Flask. Designed for online grocery shopping, it provides a clean, responsive interface for users to browse products, filter categories, manage shopping carts, and handle user sessions.
 
