@@ -27,7 +27,7 @@ FreshBasket is a full-stack e-commerce web application built using Python and Fl
 ### Installation & Setup
 
 1. Clone the repository:
-   git clone https://github.com/YOUR_USERNAME/FreshBasket.git
+   git clone https://github.com/Sreyasi27/FreshBasket--A-Grocery-Website.git
    cd FreshBasket
 
 2. Create and activate a virtual environment:
